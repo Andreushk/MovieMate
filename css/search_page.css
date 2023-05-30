@@ -1,0 +1,256 @@
+/* ----------------- Results ---------------- */
+.results-of-search__body {
+    box-sizing: border-box;
+    width: 83.33%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    color: #fff;
+    margin: 50px auto;
+}
+
+.results-of-search__body h1 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 30px;
+}
+
+.results-of-search__items-container {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 48.95%);
+    grid-column-gap: 2.10%; grid-row-gap: 25px;
+    justify-content: center;
+    align-content: center;
+}
+
+.results-of-search__item {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border: 2px solid #1E1F22;
+    border-radius: 6px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.results-of-search__item:hover {
+    background-color: #1E1F22;
+    transition: 0.2s;
+}
+
+.results-of-search__poster {
+    box-sizing: border-box;
+    flex: 0 0 240px;
+}
+
+.ROS__no-poster {
+    box-sizing: border-box;
+    width: 160px;
+    height: 240px;
+    background-color: #1E1F22;
+    border-radius: 6px;
+}
+
+.results-of-search__poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.results-of-search__item div:nth-of-type(2) {
+    box-sizing: border-box;
+    flex: 0 1 100%;
+    margin-left: 20px;
+}
+
+.results-of-search__item div:nth-of-type(2) h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.results-of-search__item div:nth-of-type(2) p:first-of-type {
+    margin-top: 15px;
+}
+
+.results-of-search__item div:nth-of-type(2) p:last-of-type {
+    margin-top: 5px;
+}
+
+.results-of-search__item div:nth-of-type(2) p {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.results-of-search__item div:nth-of-type(2) p span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.ROS__error {
+    box-sizing: border-box;
+    width: 450px;
+    position: absolute;
+    top: 50%; left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border: 3px solid #1E1F22;
+    border-radius: 6px;
+    cursor: default;
+}
+
+.ROS__error > p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    color: #6C6C6C;
+}
+
+
+/* --- Адаптивность  --- */
+@media all and (max-width: 1230px) {
+    .results-of-search__item {
+        padding: 15px;
+    }
+    .results-of-search__poster {
+        flex: 0 0 220px;
+    }
+    .results-of-search__item div:nth-of-type(2) {
+        margin-left: 15px;
+    }
+    .results-of-search__item div:nth-of-type(2) h2 {
+        font-size: 25px;
+        line-height: 29px;
+    }
+    .results-of-search__item div:nth-of-type(2) p:first-of-type {
+        margin-top: 13px;
+    }
+    .results-of-search__item div:nth-of-type(2) p:last-of-type {
+        margin-top: 4px;
+    }
+    .results-of-search__item div:nth-of-type(2) p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .results-of-search__item div:nth-of-type(2) p span {
+        font-size: 17px;
+        line-height: 19px;
+    }
+}
+
+@media all and (max-width: 1140px) {
+    .results-of-search__poster {
+        flex: 0 0 200px;
+    }
+    .results-of-search__item div:nth-of-type(2) h2 {
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .results-of-search__item div:nth-of-type(2) p {
+        font-size: 15px;
+        line-height: 17px;
+    }
+}
+
+@media all and (max-width: 1050px) {
+    .results-of-search__poster {
+        flex: 0 0 160px;
+    }
+    .results-of-search__item div:nth-of-type(2) h2 {
+        font-size: 23px;
+        line-height: 25px;
+    }
+    .results-of-search__item div:nth-of-type(2) p {
+        font-weight: 400;
+    }
+    .results-of-search__item div:nth-of-type(2) p:first-of-type {
+        margin-top: 10px;
+    }
+    .results-of-search__item div:nth-of-type(2) p:last-of-type {
+        margin-top: 2px;
+    }
+    .results-of-search__item div:nth-of-type(2) p span {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 17px;
+    }
+}
+
+@media all and (max-width: 900px) {
+    .results-of-search__body h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+    .results-of-search__items-container {
+        grid-template-columns: repeat(auto-fit, 100%);
+        grid-column-gap: 0%;
+    }
+    .results-of-search__item {
+        padding: 20px;
+    }
+    .results-of-search__poster {
+        flex: 0 0 200px;
+    }
+    .results-of-search__item div:nth-of-type(2) {
+        margin-left: 20px;
+    }
+    .results-of-search__item div:nth-of-type(2) h2 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .results-of-search__item div:nth-of-type(2) p:first-of-type {
+        margin-top: 15px;
+    }
+    .results-of-search__item div:nth-of-type(2) p:last-of-type {
+        margin-top: 5px;
+    }
+    .results-of-search__item div:nth-of-type(2) p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 17px;
+    }
+    .results-of-search__item div:nth-of-type(2) p span {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .results-of-search__items-container {
+        width: 80%;
+        margin: 30px auto;
+    }
+    .results-of-search__item {
+        flex-direction: column;
+    }
+    .results-of-search__poster {
+        width: 100%;
+    }
+    .results-of-search__item div:nth-of-type(2) {
+        flex: 0 1 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .results-of-search__item div:nth-of-type(2) h2,
+    .results-of-search__item div:nth-of-type(2) p,
+    .results-of-search__item div:nth-of-type(2) p span {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 450px) {
+    .results-of-search__items-container {
+        width: 100%;
+    }
+}
+/* --------------------------------------------- */

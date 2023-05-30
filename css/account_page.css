@@ -1,0 +1,754 @@
+/* ------------ Приветствующий блок ------------ */
+.hello__body {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 715px;
+  height: 150px;
+  padding: 30px;
+  background: #1E1F22;
+  border-radius: 6px;
+  margin: 80px auto;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+
+/* --- Адаптивность  --- */
+@media all and (max-width: 900px) {
+  .hello__body {
+    width: 450px;
+    height: 120px;
+    margin: 70px auto;
+    font-size: 25px;
+    line-height: 28px;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .hello__body {
+    width: 300px;
+    height: 120px;
+    padding: 20px;
+    text-align: center;
+  }
+}
+/* --------------------------------------------- */
+
+
+/* ------------ Блок с радиокнопками ----------- */
+.controlls__body {
+  display: flex;
+  box-sizing: border-box;
+  width: 500px;
+  height: 70px;
+  border: 3px solid #1E1F22;
+  border-radius: 6px;
+  margin: 70px auto 30px auto;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.controlls__viewed, .controlls__wishlist {
+  flex: 0 0 50%;
+  background-color: #313338;
+  transition: 0.2s;
+}
+
+.controlls__viewed > button,
+.controlls__wishlist > button {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: #313338;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.controlls-selected > button {
+  background-color: #1E1F22;
+  transition: 0.2s;
+}
+
+
+/* --- Адаптивность  --- */
+@media all and (max-width: 900px) {
+  .controlls__body {
+    width: 350px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .controlls__viewed > button,
+  .controlls__wishlist > button {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .controlls__body {
+    width: 84.72%;
+    height: 55px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .controlls__viewed > button,
+  .controlls__wishlist > button {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+/* --------------------------------------------- */
+
+
+/* ------- Список проссмотренных фильмов ------- */
+.list__body {
+  box-sizing: border-box;
+  width: 84.72%;
+  max-height: 1500px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  margin: 30px auto 80px auto;
+}
+
+.list__body::-webkit-scrollbar {width: 0; height: 0;}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 75px;
+  background-color: #1E1F22;
+  border-radius: 6px;
+  margin-top: 10px;
+  padding: 0 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.list__item h1 {
+  box-sizing: border-box;
+  max-width: 550px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 0;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+.list__item h1::-webkit-scrollbar {width: 0; height: 0;}
+
+.list__item:first-of-type {
+  margin-top: 0;
+}
+
+.list__item-delete {
+  width: 0px !important;
+  padding: 0px !important;
+  height: 75px;
+  transition: 0.3s;
+}
+
+.add-comment-btn,
+.open-comment-btn {
+  box-sizing: border-box;
+  width: 180px;
+  height: 40px;
+  background: #313338;
+  border: 3px solid #313338;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.add-comment-btn:hover,
+.open-comment-btn:hover {
+  background: #1E1F22;
+  transition: 0.2s;
+}
+
+.remove-btn,
+.wl-remove-btn {
+  box-sizing: border-box;
+  width: 160px;
+  height: 40px;
+  background: #A60B0B;
+  border: 3px solid #A60B0B;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.remove-btn:hover,
+.wl-remove-btn:hover {
+  background: #be0a0a;
+  border: 3px solid #be0a0a;
+  transition: 0.2s;
+}
+
+.wl-remove-btn {
+  margin-left: auto;
+}
+
+
+.empty-list-container {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #1E1F22;
+  border-radius: 6px;
+  margin-top: 10px;
+  padding: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+
+/* --- Адаптивность  --- */
+@media all and (max-width: 1000px) {
+  .list__body {
+    width: 500px;
+  }
+  .list__item {
+    flex-direction: column;
+    height: auto;
+    padding: 25px;
+  }
+  .list__item h1 {
+    max-width: 100%;
+    padding: 0;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25px;
+    overflow: unset;
+    text-align: center;
+  }
+  .add-comment-btn,
+  .open-comment-btn {
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+  .remove-btn,
+  .wl-remove-btn {
+    box-sizing: border-box;
+    width: 200px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@media all and (max-width: 645px) {
+  .list__body {
+    width: 84.72%;
+  }
+  .add-comment-btn,
+  .open-comment-btn {
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}
+/* --------------------------------------------- */
+
+
+/* ---------------- Блок с игрой --------------- */
+.game__body {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84.72%;
+    min-height: 550px;
+    background-color: #1E1F22;
+    border-radius: 6px;
+    margin: 80px auto;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    color: #fff;
+}
+
+.game__welcome p {
+    box-sizing: border-box;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.game__welcome button {
+    box-sizing: border-box;
+    display: block;
+    width: 350px;
+    height: 65px;
+    background: #313338;
+    border: 3px solid #313338;
+    border-radius: 6px;
+    margin: 40px auto 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.game__welcome button:hover {
+    background: #1E1F22;
+    transition: 0.2s;
+}
+
+.game__body > .MM-loader div {
+  background: #313338;
+}
+
+
+/* --- Адаптивность  --- */
+@media all and (max-width: 600px) {
+    .game__welcome p {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .game__welcome button {
+        width: 250px;
+        height: 50px;
+        margin: 30px auto 0 auto;
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+@media all and (max-width: 450px) {
+    .game__welcome {
+        padding: 20px;
+    }
+    .game__welcome p {
+        text-align: center;
+    }
+}
+/* --------------------- */
+
+/* --------------------- */
+.game__rules {
+    box-sizing: border-box;
+    width: 680px;
+    padding: 20px;
+}
+
+.game__rules h1 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+}
+
+.game__rules p {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.game__rules button {
+    box-sizing: border-box;
+    display: block;
+    width: 350px;
+    height: 65px;
+    background: #313338;
+    border: 3px solid #313338;
+    border-radius: 6px;
+    margin: 40px auto 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.game__rules button:hover {
+    background: #1E1F22;
+    transition: 0.2s;
+}
+
+
+/* --- Адаптивность  --- */
+@media all and (max-width: 850px) {
+    .game__rules {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .game__rules h1 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .game__rules p {
+        font-size: 17px;
+        line-height: 20px;
+        margin-top: 20px;
+    }
+    .game__rules button {
+        width: 250px;
+        height: 50px;
+        margin: 15px auto 0 auto;
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+/* --------------------- */
+
+/* --------------------- */
+.game__game {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game__image-container {
+    flex: 0 1 65%;
+}
+
+.game__image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.game__answers-container {
+    flex: 0 1 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.game__answers-container button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    background-color: #313338;
+    border: 3px solid #313338;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    margin-top: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.game__answers-container button:hover {
+    background-color: #1E1F22;
+    transition: 0.2s;
+}
+
+.game__answers-container button:first-of-type {
+    margin-top: 0;
+}
+
+.GA-wrong-anser {
+    background: #7B0303 !important;
+    border: 3px solid #7B0303 !important; 
+    cursor: not-allowed !important;
+    transition: 0.2s;
+}
+
+.GA-good-anser {
+    background: #2D7327 !important;
+    border: 3px solid #2D7327 !important;
+    transition: 0.2s;
+}
+
+
+/* --- Адаптивность  --- */
+@media all and (max-width: 1250px) {
+    .game__game {
+        padding: 20px;
+        flex-direction: column;
+    }
+    .game__image-container {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+    .game__answers-container {
+        width: 350px;
+        margin: 20px auto;
+    }
+    .game__answers-container button {
+        width: 350px;
+        height: 50px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .game__answers-container {
+        width: 100%;
+    }
+    .game__answers-container button {
+        width: 100%;
+    }
+}
+/* --------------------- */
+
+/* --------------------- */
+.game__results-container {
+    box-sizing: border-box;
+    width: 680px;
+    padding: 20px;
+}
+
+.game__results-container h1 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+}
+
+.game__results-container p {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.game__results-container button {
+    box-sizing: border-box;
+    display: block;
+    width: 350px;
+    height: 65px;
+    background: #313338;
+    border: 3px solid #313338;
+    border-radius: 6px;
+    margin: 40px auto 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.game__results-container button:hover {
+    background: #1E1F22;
+    transition: 0.2s;
+}
+/* --------------------------------------------- */
+
+
+/* ---------- Контейнер для комментария -------- */
+.comment__body {
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%; left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    background-color: #1E1F22;
+    border: 3px solid black;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    color: #fff;
+}
+
+.comment__body > div:first-of-type {
+    box-sizing: border-box;
+    padding: 20px 0 10px 0;
+    border-bottom: 3px solid black;
+}
+
+.comment__body > div:first-of-type > h1 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+}
+
+.comment__body > div:nth-of-type(2) {
+    box-sizing: border-box;
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+.comment__body > div:nth-of-type(2) > textarea,
+.user-comment-area {
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    background: #313338;
+    border: 3px solid #313338;
+    border-radius: 6px;
+    resize: none;
+    overflow: scroll;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    outline: 0;
+    outline-offset: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    text-align: justify;
+    word-break: break-word;
+}
+
+.comment__body > div:nth-of-type(2) > textarea::-webkit-scrollbar,
+.user-comment-area::-webkit-scrollbar {width: 0;}
+
+.comment__body > div:nth-of-type(2) > textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #6C6C6C;
+}
+
+.comment__body > div:nth-of-type(3) {
+    box-sizing: border-box;
+    width: 180px;
+    margin: 30px auto 20px auto;
+}
+
+.comment__body > div:nth-of-type(3) > button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    background: #313338;
+    border: 3px solid #313338;
+    border-radius: 6px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.comment__body > div:nth-of-type(3) > button:hover {
+    background-color: #1E1F22;
+    transition: 0.2s;
+}
+
+.comment__footer {
+  width: 80% !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment__footer > button {
+    width: 47% !important;
+    height: 40px !important;
+}
+
+.comment__footer > button:last-of-type {
+    border: none !important;
+    background-color: #0080FF !important;
+}
+
+.comment__footer > button:last-of-type:hover {
+    background-color: #1989fa;
+    transition: 0.2s;
+}
+
+.loading-overflow {
+    position: absolute;
+    top: 0; left: 0;
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+
+/* --- Адаптивность  --- */
+@media all and (max-width: 1000px) {
+  .comment__body {
+      width: 80%;
+  }
+  .comment__body > div:first-of-type {
+      padding: 20px 15px 10px 15px;
+  }
+  .comment__body > div:nth-of-type(2) {
+      padding: 25px;
+      padding-bottom: 0;
+  }
+  .comment__body > div:nth-of-type(2) > textarea,
+  .user-comment-area {
+      height: 250px;
+  }
+}
+
+@media all and (max-width: 450px) {
+    .comment__body > div:nth-of-type(2) > textarea,
+    .user-comment-area {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;        
+    }
+}
+/* --------------------------------------------- */
