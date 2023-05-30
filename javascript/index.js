@@ -1025,7 +1025,7 @@ const movieMateSPA = (function() {
   };
 
   View.prototype.removeListenersFromProfilePage = function() {
-    this.settings.profilePageModule.stop();
+    if (this.settings.profilePageModule) this.settings.profilePageModule.stop();
   };
 
   View.prototype.setAudioContext = async function(audioContext, path) {
