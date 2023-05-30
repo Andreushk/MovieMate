@@ -24,8 +24,8 @@ export const gameControllsModule = (function() {
     };
     this.gameInfo = {
       audioContext: null,
-      rightAnswerPath: "../sounds/right-answer.mp3",
-      wrongAnswerPath: "../sounds/wrong-answer.mp3",
+      rightAnswerPath: "http://fe.it-academy.by/Sites/0043221/right-answer.mp3",
+      wrongAnswerPath: "http://fe.it-academy.by/Sites/0043221/wrong-answer.mp3",
       top100MoviesAndTVs: null,
       currectIMDBID: null,
       round: 0,
