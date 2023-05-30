@@ -76,9 +76,9 @@ const recommendationSection = (function() {
           controller.abort();
       }, 10000);
 
-      //const response = await fetch(`https://imdb-api.com/en/API/Top250TVs/${this.settings.IMDbKey}`, {signal});
-      //const data = await response.json();
-      const data = top250Movies
+      const response = await fetch(`https://imdb-api.com/en/API/Top250Movies/${this.settings.IMDbKey}`, {signal});
+      const data = await response.json();
+      //const data = top250Movies
 
       const numbersOfMoviesFromTop250 = this.get10RandomNumbers();
       const arrayWithMoviesData = [];
