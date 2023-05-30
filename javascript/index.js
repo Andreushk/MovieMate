@@ -98,7 +98,7 @@ const movieMateSPA = (function() {
         comments: null,
       },
       audioContext: null,
-      authorizedSoundPath: "../sounds/login-sound.mp3",
+      authorizedSoundPath: "http://fe.it-academy.by/Sites/0043221/login-sound.mp3",
       isUserAuthorized: false,
       UID: null,
 
