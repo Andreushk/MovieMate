@@ -122,7 +122,7 @@ export const searchModule = (function() {
         }, 10000);
 
         
-        const response = await fetch(`http://www.omdbapi.com/?apikey=${this.OMDBAPIKEY}&s=${this.titleOfMovieForSearch}`, {signal});
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${this.OMDBAPIKEY}&s=${this.titleOfMovieForSearch}`, {signal});
         const data = await response.json();
       
         /*
